@@ -1,7 +1,7 @@
 {
   "name": "Honolulu Control Facility (HCF)",
   "id": "e8043679-e0f8-46c8-a703-3f9c6a4cbcea",
-  "updateUrl": "https://raw.githubusercontent.com/vHCF-Facility-Team/hcf-atis/refs/heads/main/HCF.json",
+  "updateUrl": "https://vhcf-facility-team.github.io/hcf-atis/HCF.json",
   "updateSerial": 2026032505,
   "stations": [
     {
