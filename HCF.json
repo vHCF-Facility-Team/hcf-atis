@@ -2,7 +2,7 @@
   "name": "Honolulu Control Facility (HCF)",
   "id": "e8043679-e0f8-46c8-a703-3f9c6a4cbcea",
   "updateUrl": "https://raw.githubusercontent.com/vHCF-Facility-Team/hcf-atis/refs/heads/main/HCF.json",
-  "updateSerial": 2026032503,
+  "updateSerial": 2026032504,
   "stations": [
     {
       "id": "38408947-e4a2-46ff-8959-4b3b51f354e5",
@@ -3941,7 +3941,7 @@
           "name": "NORTH",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "airportConditions": "LDG/DEP RWY 2/5, EXEPCT ILS, RNAV, OR VIS APP.",
-          "notams": "SAID SYSTEM IN USE, SQUAWK MODE C ON ALL RUNWAYS AND TAXIWAYS,",
+          "notams": "SAID SYSTEM IN USE, SQUAWK MODE CHARLIE ON ALL RUNWAYS AND TAXIWAYS,",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "",
@@ -3958,7 +3958,7 @@
           "name": "SOUTH",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "airportConditions": "LDG/DEP RWY 20/23, EXEPCT RNAV OR VIS APP.",
-          "notams": "SAID SYSTEM IN USE, SQUAWK MODE C ON ALL RUNWAYS AND TAXIWAYS,",
+          "notams": "SAID SYSTEM IN USE, SQUAWK MODE CHARLIE ON ALL RUNWAYS AND TAXIWAYS,",
           "externalGenerator": {
             "enabled": false,
             "textUrl": "",
@@ -3987,9 +3987,14 @@
           "voice": "DEPARTING"
         },
         {
-          "variableName": "C",
+          "variableName": "VIS",
+          "text": "VIS",
+          "voice": "VISUAL"
+        },
+        {
+          "variableName": "CHARLIE",
           "text": "C",
-          "voice": "C"
+          "voice": "CHARLIE"
         }
       ],
       "airportConditionDefinitions": [],
