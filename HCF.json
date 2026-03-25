@@ -2,7 +2,7 @@
   "name": "Honolulu Control Facility (HCF)",
   "id": "e8043679-e0f8-46c8-a703-3f9c6a4cbcea",
   "updateUrl": "https://vhcf-facility-team.github.io/hcf-atis/HCF.json",
-  "updateSerial": 2026032506,
+  "updateSerial": 2026032507,
   "stations": [
     {
       "id": "38408947-e4a2-46ff-8959-4b3b51f354e5",
@@ -1926,8 +1926,8 @@
           "id": "b7a3c44d-77e7-4e92-8cd1-803ab4a8fa40",
           "ordinal": 0,
           "name": "EAST",
-          "airportConditions": "",
-          "notams": "",
+          "airportConditions": "DEP RWYS 8L, 8R, 4R, HEAVY AIRCRAFT EXPECT RWY 8R FOR DEP, LDG RWYS 8L, 4R. EXPECT ILS, RNAV, OR VIS APP.",
+          "notams": "ASDE-X SYSTEM IN USE, SQUAWK MODE C ON ALL RUNWAYS AND TAXIWAYS.",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "externalGenerator": {
             "enabled": false
@@ -1935,10 +1935,10 @@
         },
         {
           "id": "b7a3c44d-77e7-4e92-8cd1-803ab4a8fa41",
-          "ordinal": 0,
-          "name": "ATIS",
-          "airportConditions": "",
-          "notams": "",
+          "ordinal": 1,
+          "name": "WEST",
+          "airportConditions": "DEP RWY 26R, 22L, LDG RWY 26L. EXPECT LDA, RNAV, OR VIS APP",
+          "notams": "ASDE-X SYSTEM IN USE, SQUAWK MODE C ON ALL RUNWAYS AND TAXIWAYS.",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "externalGenerator": {
             "enabled": false
@@ -1950,6 +1950,31 @@
           "variableName": "RNAV",
           "text": "RNAV",
           "voice": "ARE-NAV"
+        },
+        {
+          "variableName": "LDG",
+          "text": "LDG",
+          "voice": "LANDING"
+        },
+        {
+          "variableName": "DEP",
+          "text": "DEP",
+          "voice": "DEPARTING"
+        },
+        {
+          "variableName": "VIS",
+          "text": "VIS",
+          "voice": "VISUAL"
+        },
+        {
+          "variableName": "CHARLIE",
+          "text": "C",
+          "voice": "CHARLIE"
+        },
+        {
+          "variableName": "APP",
+          "text": "APP",
+          "voice": "APPROACH"
         }
       ],
       "airportConditionDefinitions": [
@@ -3940,7 +3965,7 @@
           "ordinal": 0,
           "name": "NORTH",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
-          "airportConditions": "LDG/DEP RWY 2/5, EXPECT ILS, RNAV, OR VIS APP.",
+          "airportConditions": "LDG AND DEP RWYS 2, 5, EXPECT ILS, RNAV, OR VIS APP.",
           "notams": "SAID SYSTEM IN USE, SQUAWK MODE CHARLIE ON ALL RUNWAYS AND TAXIWAYS,",
           "externalGenerator": {
             "enabled": false,
@@ -3957,7 +3982,7 @@
           "ordinal": 1,
           "name": "SOUTH",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
-          "airportConditions": "LDG/DEP RWY 20/23, EXPECT RNAV OR VIS APP.",
+          "airportConditions": "LDG AND DEP RWYS 20, 23, EXPECT RNAV OR VIS APP.",
           "notams": "SAID SYSTEM IN USE, SQUAWK MODE CHARLIE ON ALL RUNWAYS AND TAXIWAYS,",
           "externalGenerator": {
             "enabled": false,
@@ -3997,9 +4022,9 @@
           "voice": "CHARLIE"
         },
         {
-          "variableName": "KAHULUI",
-          "text": "KAHULUI",
-          "voice": "kah-hoo-LOO-ee"
+          "variableName": "APP",
+          "text": "APP",
+          "voice": "APPROACH"
         }
       ],
       "airportConditionDefinitions": [],
