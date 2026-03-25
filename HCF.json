@@ -2,7 +2,7 @@
   "name": "Honolulu Control Facility (HCF)",
   "id": "e8043679-e0f8-46c8-a703-3f9c6a4cbcea",
   "updateUrl": "https://vhcf-facility-team.github.io/hcf-atis/HCF.json",
-  "updateSerial": 2026032505,
+  "updateSerial": 2026032506,
   "stations": [
     {
       "id": "38408947-e4a2-46ff-8959-4b3b51f354e5",
@@ -3995,6 +3995,11 @@
           "variableName": "CHARLIE",
           "text": "C",
           "voice": "CHARLIE"
+        },
+        {
+          "variableName": "KAHULUI",
+          "text": "KAHULUI",
+          "voice": "kah-hoo-LOO-ee"
         }
       ],
       "airportConditionDefinitions": [],
