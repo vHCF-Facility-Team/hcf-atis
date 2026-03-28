@@ -2,7 +2,7 @@
   "name": "Honolulu Control Facility (HCF)",
   "id": "e8043679-e0f8-46c8-a703-3f9c6a4cbcea",
   "updateUrl": "https://vhcf-facility-team.github.io/hcf-atis/HCF.json",
-  "updateSerial": 2026032509,
+  "updateSerial": 2026032510,
   "stations": [
     {
       "id": "38408947-e4a2-46ff-8959-4b3b51f354e5",
@@ -2008,28 +2008,7 @@
         }
       ],
       "airportConditionDefinitions": [],
-      "notamDefinitions": [
-        {
-          "text": "LAHSO IN EFFECT. ADV APCH IF NO LAHSO",
-          "ordinal": 1,
-          "enabled": true
-        },
-        {
-          "text": "SQUAWK MODE CHARLIE AND ASSIGNED CODE ON ALL TAXIWAYS AND RUNWAYS.",
-          "ordinal": 2,
-          "enabled": true
-        },
-        {
-          "text": "READ BACK ALL CONTROL INSTRUCTIONS",
-          "ordinal": 3,
-          "enabled": true
-        },
-        {
-          "text": "IFR DEPARTURES RWY 22, FOLLOW NOTE ON SID FOR RWY 26",
-          "ordinal": 4,
-          "enabled": false
-        }
-      ]
+      "notamDefinitions": []
     },
     {
       "id": "4ed03e8b-3321-45a6-8f92-e7a4cc3c5b77",
@@ -5940,52 +5919,67 @@
         {
           "id": "a865cffa-3868-4ef5-ae3b-f9d17ce3b59b",
           "ordinal": 0,
-          "name": "ATIS",
+          "name": "NORTH",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
+          "airportConditions": "LDG/DEP RWY 35, EXPECT RNAV OR VIS APP",
           "externalGenerator": {
             "enabled": false
           }
+        },
+        {
+          "id": "a865cffa-3868-4ef5-ae3b-f9d17ce3b59b",
+          "ordinal": 1,
+          "name": "SOUTH",
+          "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
+          "airportConditions": "LDG/DEP RWY 17, EXPECT ILS, RNAV, OR VIS APP",
+          "externalGenerator": {
+            "enabled": false
         }
+      }
       ],
       "contractions": [
+        {
+          "variableName": "17",
+          "text": "17",
+          "voice": "ONE SEVEN"
+        },
+        {
+          "variableName": "35",
+          "text": "35",
+          "voice": "THREE FIVE"
+        },
         {
           "variableName": "RNAV",
           "text": "RNAV",
           "voice": "ARE-NAV"
+        },
+        {
+          "variableName": "LDG",
+          "text": "LDG",
+          "voice": "LANDING"
+        },
+        {
+          "variableName": "DEP",
+          "text": "DEP",
+          "voice": "DEPARTING"
+        },
+        {
+          "variableName": "VIS",
+          "text": "VIS",
+          "voice": "VISUAL"
+        },
+        {
+          "variableName": "CHARLIE",
+          "text": "C",
+          "voice": "CHARLIE"
+        },
+        {
+          "variableName": "APP",
+          "text": "APP",
+          "voice": "APPROACH"
         }
       ],
-      "airportConditionDefinitions": [
-        {
-          "text": "LDG/DEPTG RWY 17",
-          "ordinal": 1,
-          "enabled": true
-        },
-        {
-          "text": "LDG/DEPTG RWY 35",
-          "ordinal": 2,
-          "enabled": false
-        },
-        {
-          "text": "EXP ILS, OR VIS APCH",
-          "ordinal": 3,
-          "enabled": true
-        },
-        {
-          "text": "EXP ILS APCH",
-          "ordinal": 4,
-          "enabled": false
-        },
-        {
-          "text": "EXP RNAV, OR VIS APCH",
-          "ordinal": 5,
-          "enabled": false
-        },
-        {
-          "text": "EXP RNAV APCH",
-          "ordinal": 6,
-          "enabled": false
-        }
-      ],
+      "airportConditionDefinitions": [],
       "notamDefinitions": []
     },
     {
@@ -7909,41 +7903,57 @@
         {
           "id": "7af36503-002e-4b6f-ab32-db950ccdd8ac",
           "ordinal": 0,
-          "name": "ATIS",
+          "name": "EAST",
+          "airportConditions": "DEP RWYS 3, 8, LDG RWY 8. EXPECT VIS APP.",
+          "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
+          "externalGenerator": {
+            "enabled": false
+          }
+        },
+        {
+          "id": "7af36503-002e-4b6f-ab32-db950ccdd8ac",
+          "ordinal": 1,
+          "name": "WEST",
+          "airportConditions": "DEP RWYS 21, 26, LDG RWY 26. EXPECT ILS, RNAV, OR VIS APP.",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "externalGenerator": {
             "enabled": false
           }
         }
       ],
-      "contractions": [],
-      "airportConditionDefinitions": [
+      "contractions": [
         {
-          "text": "LDG 26, DEPTG RWY 21/26",
-          "ordinal": 1,
-          "enabled": true
+          "variableName": "RNAV",
+          "text": "RNAV",
+          "voice": "ARE-NAV"
         },
         {
-          "text": "LDG 08, DEPTG RWY 3/8",
-          "ordinal": 2,
-          "enabled": false
+          "variableName": "LDG",
+          "text": "LDG",
+          "voice": "LANDING"
         },
         {
-          "text": "EXP ILS, OR VIS APCH",
-          "ordinal": 3,
-          "enabled": true
+          "variableName": "DEP",
+          "text": "DEP",
+          "voice": "DEPARTING"
         },
         {
-          "text": "EXP ILS APCH",
-          "ordinal": 4,
-          "enabled": false
+          "variableName": "VIS",
+          "text": "VIS",
+          "voice": "VISUAL"
         },
         {
-          "text": "EXP VIS APCH",
-          "ordinal": 5,
-          "enabled": false
+          "variableName": "CHARLIE",
+          "text": "C",
+          "voice": "CHARLIE"
+        },
+        {
+          "variableName": "APP",
+          "text": "APP",
+          "voice": "APPROACH"
         }
       ],
+      "airportConditionDefinitions": [],
       "notamDefinitions": []
     },
     {
@@ -9867,7 +9877,18 @@
         {
           "id": "fc3384dc-7f94-46ce-9eba-30a017a7725e",
           "ordinal": 0,
-          "name": "ATIS",
+          "name": "NORTH",
+          "airportConditions": "DEP RWYS 3, 35. LDG RWY 35. EXPECT ILS, RNAV, OR VIS APP.",
+          "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
+          "externalGenerator": {
+            "enabled": false
+          }
+        },
+        {
+          "id": "fc3384dc-7f94-46ce-9eba-30a017a7725e",
+          "ordinal": 1,
+          "name": "SOUTH",
+          "airportConditions": "LDG/DEP RWYS 17, 21. EXPECT ILS, RNAV, OR VIS APP.",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "externalGenerator": {
             "enabled": false
@@ -9879,35 +9900,34 @@
           "variableName": "RNAV",
           "text": "RNAV",
           "voice": "ARE-NAV"
+        },
+         {
+          "variableName": "LDG",
+          "text": "LDG",
+          "voice": "LANDING"
+        },
+        {
+          "variableName": "DEP",
+          "text": "DEP",
+          "voice": "DEPARTING"
+        },
+        {
+          "variableName": "VIS",
+          "text": "VIS",
+          "voice": "VISUAL"
+        },
+        {
+          "variableName": "CHARLIE",
+          "text": "C",
+          "voice": "CHARLIE"
+        },
+        {
+          "variableName": "APP",
+          "text": "APP",
+          "voice": "APPROACH"
         }
       ],
-      "airportConditionDefinitions": [
-        {
-          "text": "LDG RWY 35, DEPTG 3/35",
-          "ordinal": 1,
-          "enabled": true
-        },
-        {
-          "text": "LDG/DEPTG 17/21",
-          "ordinal": 2,
-          "enabled": false
-        },
-        {
-          "text": "EXP ILS, OR VIS APCH",
-          "ordinal": 3,
-          "enabled": true
-        },
-        {
-          "text": "EXP RNAV, OR VIS APCH",
-          "ordinal": 4,
-          "enabled": false
-        },
-        {
-          "text": "EXP RNAV APCH",
-          "ordinal": 5,
-          "enabled": false
-        }
-      ],
+      "airportConditionDefinitions": [],
       "notamDefinitions": []
     },
     {
