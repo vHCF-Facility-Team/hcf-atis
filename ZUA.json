@@ -1,6 +1,8 @@
 {
-  "name": "Guam New",
-  "id": "d2c8fe98-2d33-4df7-9d06-9da54a3c7c53",
+  "name": "Guam CERAP (ZUA)",
+  "id": "d8052acd-40bb-4da8-b9ec-10f81ddf099d",
+  "updateUrl": "https://vhcf-facility-team.github.io/hcf-atis/ZUA.json",
+  "updateSerial": 20260402,
   "stations": [
     {
       "id": "e1bb2600-b314-40e3-906c-e6d8fc62926d",
@@ -81,6 +83,12 @@
             "voice": "VISIBILITY {visibility}"
           }
         },
+        "runwayVisualRange": {
+          "neutralTendency": "Neutral",
+          "goingUpTendency": "Going Up",
+          "goingDownTendency": "Going Down",
+          "template": {}
+        },
         "presentWeather": {
           "presentWeatherTypes": {
             "-DS": {
@@ -1781,6 +1789,12 @@
         },
         "clouds": {
           "identifyCeilingLayer": true,
+          "identifyCeilingLayerTextAtis": false,
+          "textAtisCeilingPrefix": "CIG",
+          "cloudCeilingLayerTypes": [
+            "BKN",
+            "OVC"
+          ],
           "convertToMetric": false,
           "isAltitudeInHundreds": false,
           "undeterminedLayerAltitude": {
@@ -1861,6 +1875,22 @@
             "voice": "ALTIMETER {altimeter}"
           }
         },
+        "trend": {
+          "nosigText": "NOSIG",
+          "nosigVoice": "No Significant Changes",
+          "becomingText": "BECMG",
+          "becomingVoice": "Becoming",
+          "temporaryText": "TEMPO",
+          "temporaryVoice": "Temporary",
+          "template": {}
+        },
+        "windShear": {
+          "runwayText": "WS R{Runway}",
+          "runwayVoice": "Wind Shear Runway {Runway}",
+          "allRunwayText": "WS ALL RWY",
+          "allRunwayVoice": "Wind Shear All Runways",
+          "template": {}
+        },
         "transitionLevel": {
           "values": [],
           "template": {
@@ -1895,7 +1925,18 @@
         {
           "id": "758df430-c2c8-482d-9d27-946d1e13dc85",
           "ordinal": 0,
-          "name": "ATIS",
+          "name": "EAST",
+          "airportConditions": "LDG/DEP RWY 6. DEP EXP RWY 6L AT A 11000 FT REMAINING. HEAVY ACFT EXP RWY 6L FULL LENGTH FOR DEPARTURE. EXP ILS, RNAV, OR VIS APCH",
+          "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
+          "externalGenerator": {
+            "enabled": false
+          }
+        },
+        {
+          "id": "27f39ce9-0aa9-4bb6-89bc-5022492ad13d",
+          "ordinal": 1,
+          "name": "WEST",
+          "airportConditions": "LDG/DEP RWY 24. EXPECT RNAV OR VIS APP.",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "externalGenerator": {
             "enabled": false
@@ -1907,52 +1948,25 @@
           "variableName": "RNAV",
           "text": "RNAV",
           "voice": "ARE-NAV"
+        },
+        {
+          "variableName": "LDG",
+          "text": "LDG",
+          "voice": "LANDING"
+        },
+        {
+          "variableName": "DEP",
+          "text": "DEP",
+          "voice": "DEPARTING"
+        },
+        {
+          "variableName": "VIS",
+          "text": "VIS",
+          "voice": "VISUAL"
         }
       ],
-      "airportConditionDefinitions": [
-        {
-          "text": "LDG/DEPTG RWY 6",
-          "ordinal": 1,
-          "enabled": true
-        },
-        {
-          "text": "LDG/DEPTG RWY 24",
-          "ordinal": 2,
-          "enabled": false
-        },
-        {
-          "text": "DEP EXP RWY 6L AT A 11000 FT REMAINING",
-          "ordinal": 3,
-          "enabled": true
-        },
-        {
-          "text": "HEAVY ACFT EXP RWY 6L FULL LENGTH FOR DEP",
-          "ordinal": 4,
-          "enabled": true
-        },
-        {
-          "text": "EXP ILS, RNAV, OR VIS APCH",
-          "ordinal": 5,
-          "enabled": true
-        },
-        {
-          "text": "EXP ILS, OR RNAV APCH",
-          "ordinal": 6,
-          "enabled": false
-        },
-        {
-          "text": "EXP RNAV, OR VIS APCH",
-          "ordinal": 7,
-          "enabled": false
-        }
-      ],
-      "notamDefinitions": [
-        {
-          "text": "SQUAWK MODE CHARLIE AND ASSIGNED CODE ON ALL TAXIWAYS AND RUNWAYS",
-          "ordinal": 1,
-          "enabled": true
-        }
-      ]
+      "airportConditionDefinitions": [],
+      "notamDefinitions": []
     },
     {
       "id": "925c79bd-8947-47a5-b397-c6122e742cf7",
@@ -2033,6 +2047,12 @@
             "voice": "VISIBILITY {visibility}"
           }
         },
+        "runwayVisualRange": {
+          "neutralTendency": "Neutral",
+          "goingUpTendency": "Going Up",
+          "goingDownTendency": "Going Down",
+          "template": {}
+        },
         "presentWeather": {
           "presentWeatherTypes": {
             "-DS": {
@@ -3733,6 +3753,12 @@
         },
         "clouds": {
           "identifyCeilingLayer": true,
+          "identifyCeilingLayerTextAtis": false,
+          "textAtisCeilingPrefix": "CIG",
+          "cloudCeilingLayerTypes": [
+            "BKN",
+            "OVC"
+          ],
           "convertToMetric": false,
           "isAltitudeInHundreds": false,
           "undeterminedLayerAltitude": {
@@ -3813,6 +3839,22 @@
             "voice": "ALTIMETER {altimeter}"
           }
         },
+        "trend": {
+          "nosigText": "NOSIG",
+          "nosigVoice": "No Significant Changes",
+          "becomingText": "BECMG",
+          "becomingVoice": "Becoming",
+          "temporaryText": "TEMPO",
+          "temporaryVoice": "Temporary",
+          "template": {}
+        },
+        "windShear": {
+          "runwayText": "WS R{Runway}",
+          "runwayVoice": "Wind Shear Runway {Runway}",
+          "allRunwayText": "WS ALL RWY",
+          "allRunwayVoice": "Wind Shear All Runways",
+          "template": {}
+        },
         "transitionLevel": {
           "values": [],
           "template": {
@@ -3847,7 +3889,18 @@
         {
           "id": "67c30e3e-68dc-45cc-a291-8d70be409346",
           "ordinal": 0,
-          "name": "ATIS",
+          "name": "EAST",
+          "airportConditions": "LDG/DEP RWY 6. EXP ILS, RNAV, OR VIS APCH.",
+          "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
+          "externalGenerator": {
+            "enabled": false
+          }
+        },
+        {
+          "id": "19a79111-7e89-420c-b820-40696a18694b",
+          "ordinal": 1,
+          "name": "WEST",
+          "airportConditions": "LDG/DEP RWY 24. EXPECT ILS, RNAV, OR VIS APCH.",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "externalGenerator": {
             "enabled": false
@@ -3859,30 +3912,24 @@
           "variableName": "RNAV",
           "text": "RNAV",
           "voice": "ARE-NAV"
+        },
+        {
+          "variableName": "LDG",
+          "text": "LDG",
+          "voice": "LANDING"
+        },
+        {
+          "variableName": "DEP",
+          "text": "DEP",
+          "voice": "DEPARTING"
+        },
+        {
+          "variableName": "VIS",
+          "text": "VIS",
+          "voice": "VISUAL"
         }
       ],
-      "airportConditionDefinitions": [
-        {
-          "text": "LDG/DEPTG RWY 6",
-          "ordinal": 1,
-          "enabled": true
-        },
-        {
-          "text": "LDG/DEPTG RWY 24",
-          "ordinal": 2,
-          "enabled": false
-        },
-        {
-          "text": "EXP ILS, RNAV, OR VIS APCH",
-          "ordinal": 3,
-          "enabled": true
-        },
-        {
-          "text": "EXP ILS, OR RNAV APCH",
-          "ordinal": 4,
-          "enabled": false
-        }
-      ],
+      "airportConditionDefinitions": [],
       "notamDefinitions": []
     },
     {
@@ -3964,6 +4011,12 @@
             "voice": "VISIBILITY {visibility}"
           }
         },
+        "runwayVisualRange": {
+          "neutralTendency": "Neutral",
+          "goingUpTendency": "Going Up",
+          "goingDownTendency": "Going Down",
+          "template": {}
+        },
         "presentWeather": {
           "presentWeatherTypes": {
             "-DS": {
@@ -5664,6 +5717,12 @@
         },
         "clouds": {
           "identifyCeilingLayer": true,
+          "identifyCeilingLayerTextAtis": false,
+          "textAtisCeilingPrefix": "CIG",
+          "cloudCeilingLayerTypes": [
+            "BKN",
+            "OVC"
+          ],
           "convertToMetric": false,
           "isAltitudeInHundreds": false,
           "undeterminedLayerAltitude": {
@@ -5744,6 +5803,22 @@
             "voice": "ALTIMETER {altimeter}"
           }
         },
+        "trend": {
+          "nosigText": "NOSIG",
+          "nosigVoice": "No Significant Changes",
+          "becomingText": "BECMG",
+          "becomingVoice": "Becoming",
+          "temporaryText": "TEMPO",
+          "temporaryVoice": "Temporary",
+          "template": {}
+        },
+        "windShear": {
+          "runwayText": "WS R{Runway}",
+          "runwayVoice": "Wind Shear Runway {Runway}",
+          "allRunwayText": "WS ALL RWY",
+          "allRunwayVoice": "Wind Shear All Runways",
+          "template": {}
+        },
         "transitionLevel": {
           "values": [],
           "template": {
@@ -5778,7 +5853,20 @@
         {
           "id": "0e0b4ff2-e56b-4d5c-bccb-8038a6f2e51f",
           "ordinal": 0,
-          "name": "ATIS",
+          "name": "EAST",
+          "airportConditions": "LDG/DEPTG RWY 7. EXP ILS, RNAV, OR VIS APCH.",
+          "notams": "RWY 6/34 CLOSED.",
+          "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
+          "externalGenerator": {
+            "enabled": false
+          }
+        },
+        {
+          "id": "ee504414-4658-4552-ab11-55bcbe928fbc",
+          "ordinal": 1,
+          "name": "WEST",
+          "airportConditions": "LDG/DEPTG RWY 25. EXP RNAV, OR VIS APCH.",
+          "notams": "RWY 6/24 CLOSED.",
           "template": "[FACILITY] ATIS INFO [ATIS_CODE] [TIME]. [WX]. [ARPT_COND] [NOTAMS]",
           "externalGenerator": {
             "enabled": false
@@ -5792,45 +5880,8 @@
           "voice": "ARE-NAV"
         }
       ],
-      "airportConditionDefinitions": [
-        {
-          "text": "LDG/DEPTG RWY 7",
-          "ordinal": 1,
-          "enabled": true
-        },
-        {
-          "text": "LDG/DEPTG RWY 25",
-          "ordinal": 2,
-          "enabled": false
-        },
-        {
-          "text": "EXP ILS, RNAV, OR VIS APCH",
-          "ordinal": 3,
-          "enabled": true
-        },
-        {
-          "text": "EXP RNAV, OR VIS APCH",
-          "ordinal": 4,
-          "enabled": false
-        },
-        {
-          "text": "EXP ILS, OR RNAV APCH",
-          "ordinal": 5,
-          "enabled": false
-        },
-        {
-          "text": "EXP RNAV APCH",
-          "ordinal": 6,
-          "enabled": false
-        }
-      ],
-      "notamDefinitions": [
-        {
-          "text": "RWY 6/24 CLOSED",
-          "ordinal": 1,
-          "enabled": true
-        }
-      ]
+      "airportConditionDefinitions": [],
+      "notamDefinitions": []
     }
   ],
   "version": 4
